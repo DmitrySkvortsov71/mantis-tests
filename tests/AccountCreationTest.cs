@@ -8,7 +8,7 @@ namespace mantis_tests
   [TestFixture]
   public class AccountCreationTests : TestBase
   {
-    private const string ConfigRemotePath = "/config_defaults_inc.php";
+    private const string ConfigRemotePath = "config_defaults_inc.php";
     private const string ConfigLocalPath = "config_defaults_inc.php";
 
     [OneTimeSetUp]

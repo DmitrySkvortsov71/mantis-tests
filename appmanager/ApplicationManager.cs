@@ -33,7 +33,7 @@ namespace mantis_tests
       if (!app.IsValueCreated)
       {
         app.Value = new ApplicationManager();
-        app.Value.driver.Url = $"{app.Value.baseUrl}mantis/";
+        app.Value.driver.Url = $"{app.Value.baseUrl}mantisbt-2.26.0/";
       }
 
       return app.Value;

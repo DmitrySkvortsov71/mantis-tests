@@ -1,5 +1,4 @@
-﻿using System;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 
 namespace mantis_tests
 {
@@ -15,6 +14,12 @@ namespace mantis_tests
       OpenRegistrationForm();
       FillRegistrationForm(account);
       SubmitRegistration();
+      Proceed();
+    }
+
+    private void Proceed()
+    {
+      driver.FindElement(By.CssSelector("a[href='login_page.php']")).Click();
     }
 
     private void OpenRegistrationForm()
@@ -24,7 +29,7 @@ namespace mantis_tests
 
     private void OpenMainPage()
     {
-      manager.Driver.Url = $"{manager.baseUrl}mantis/";
+      manager.Driver.Url = $"{manager.baseUrl}mantisbt-2.26.0/";
     }
 
     private void FillRegistrationForm(AccountData account)
@@ -36,7 +41,7 @@ namespace mantis_tests
 
     private void SubmitRegistration()
     {
-      driver.FindElement(By.CssSelector("input.button")).Click();
+      driver.FindElement(By.CssSelector("input[type='submit']")).Click();
       WaitTillElementPresence(
           30, "xpath",
           "//*[contains(text(), 'Account registration processed.')]"
