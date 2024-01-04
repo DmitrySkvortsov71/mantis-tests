@@ -431,6 +431,13 @@ $g_antispam_time_window_in_seconds = 3600;
 ###########################
 
 /**
+ * for mantis-tests solution
+ */
+ $g_phpMailer_method = PHPMAILER_METHOD_SMTP;
+ $g_smtp_port = '25';
+ $g_smtp_host = 'localhost';
+
+/**
  * Webmaster email address. This is shown publicly at the bottom of each page
  * and thus may be susceptible to being detected by spam email harvesters.
  * @global string $g_webmaster_email
